@@ -1,17 +1,17 @@
-import MagicString from "magic-string";
+import MagicString from 'magic-string'
 import {
   presetAttributify,
   presetUno,
   transformerAttributifyJsx,
-} from "unocss";
-import transformerAttributifyJsxBabel from "@unocss/transformer-attributify-jsx-babel";
-import { createGenerator } from "@unocss/core";
-import { describe, expect, it } from "vitest";
-import transformerAttributifyJsxSg from "../src/index";
+} from 'unocss'
+import transformerAttributifyJsxBabel from '@unocss/transformer-attributify-jsx-babel'
+import { createGenerator } from '@unocss/core'
+import { describe, expect, it } from 'vitest'
+import transformerAttributifyJsxSg from '../src/index'
 
 const originalCode = `
 <div h-full text-center flex select-none className={red ? 'text-red': 'text-green'}>
-<div text-red>123</div>
+  <div text-red>123</div>
   <input value={ target ? '10px' : '20px'} style={{ height: '100px' }} />
   <div ma>
     <div text-5xl fw100 animate-bounce-alt animate-count-infinite animate-duration-1s key={index}>
@@ -50,23 +50,23 @@ const originalCode = `
   <div {...true ? flex : props.grid } {...grid || ( block ) && $flex } />  
   <div {...[, flex, [flex], !flex, -flex, +flex, ~flex, "flex", \`flex\` ] } />  
 </div>
-  `.trim();
+  `.trim()
 
-describe("transformerAttributifyJsx", () => {
+describe('transformerAttributifyJsx', () => {
   const uno = createGenerator({
     presets: [presetUno(), presetAttributify()],
-  });
+  })
 
-  it("transform", async () => {
-    const code = new MagicString(originalCode);
-    await transformerAttributifyJsx().transform(code, "app.tsx", {
+  it('transform', async () => {
+    const code = new MagicString(originalCode)
+    await transformerAttributifyJsx().transform(code, 'app.tsx', {
       uno,
       tokens: new Set(),
-    } as any);
+    } as any)
 
     expect(code.toString()).toMatchInlineSnapshot(`
       "<div h-full=\\"\\" text-center=\\"\\" flex=\\"\\" select-none=\\"\\" className={red ? 'text-red': 'text-green'}>
-      <div text-red=\\"\\">123</div>
+        <div text-red=\\"\\">123</div>
         <input value={ target ? '10px' : '20px'} style={{ height: '100px' }} />
         <div ma=\\"\\">
           <div text-5xl=\\"\\" fw100=\\"\\" animate-bounce-alt=\\"\\" animate-count-infinite=\\"\\" animate-duration-1s=\\"\\" key={index}>
@@ -105,25 +105,25 @@ describe("transformerAttributifyJsx", () => {
         <div {...true ? flex : props.grid } {...grid || ( block ) && $flex } />  
         <div {...[, flex, [flex], !flex, -flex, +flex, ~flex, \\"flex\\", \`flex\` ] } />  
       </div>"
-    `);
-  });
-});
+    `)
+  })
+})
 
-describe("transformerAttributifyJsxSg", () => {
+describe('transformerAttributifyJsxSg', () => {
   const uno = createGenerator({
     presets: [presetUno(), presetAttributify()],
-  });
+  })
 
-  it("transform", async () => {
-    const code = new MagicString(originalCode);
-    await transformerAttributifyJsxSg().transform(code, "app.tsx", {
+  it('transform', async () => {
+    const code = new MagicString(originalCode)
+    await transformerAttributifyJsxSg().transform(code, 'app.tsx', {
       uno,
       tokens: new Set(),
-    } as any);
+    } as any)
 
     expect(code.toString()).toMatchInlineSnapshot(`
       "<div h-full=\\"\\" text-center=\\"\\" flex=\\"\\" select-none=\\"\\" className={red ? 'text-red': 'text-green'}>
-      <div text-red=\\"\\">123</div>
+        <div text-red=\\"\\">123</div>
         <input value={ target ? '10px' : '20px'} style={{ height: '100px' }} />
         <div ma=\\"\\">
           <div text-5xl=\\"\\" fw100=\\"\\" animate-bounce-alt=\\"\\" animate-count-infinite=\\"\\" animate-duration-1s=\\"\\" key={index}>
@@ -162,21 +162,21 @@ describe("transformerAttributifyJsxSg", () => {
         <div {...true ? flex : props.grid } {...grid || ( block ) && $flex } />  
         <div {...[, flex, [flex], !flex, -flex, +flex, ~flex, \\"flex\\", \`flex\` ] } />  
       </div>"
-    `);
-  });
-});
+    `)
+  })
+})
 
-describe("transformerAttributifyJsxBabel", () => {
+describe('transformerAttributifyJsxBabel', () => {
   const uno = createGenerator({
     presets: [presetUno(), presetAttributify()],
-  });
+  })
 
-  it("transform", async () => {
-    const code = new MagicString(originalCode);
-    await transformerAttributifyJsxBabel().transform(code, "app.tsx", {
+  it('transform', async () => {
+    const code = new MagicString(originalCode)
+    await transformerAttributifyJsxBabel().transform(code, 'app.tsx', {
       uno,
       tokens: new Set(),
-    } as any);
+    } as any)
 
     expect(code.toString()).toMatchInlineSnapshot(`
       "<div h-full=\\"\\" text-center=\\"\\" flex=\\"\\" select-none=\\"\\" className={red ? 'text-red' : 'text-green'}>
@@ -219,6 +219,6 @@ describe("transformerAttributifyJsxBabel", () => {
         <div {...true ? flex : props.grid} {...grid || block && $flex} />  
         <div {...[, flex, [flex], !flex, -flex, +flex, ~flex, \\"flex\\", \`flex\`]} />  
       </div>;"
-    `);
-  });
-});
+    `)
+  })
+})

@@ -1,23 +1,22 @@
 {
-  "name": "@unocss/transformer-attributify-jsx",
+  "name": "transformer-attributify-jsx-sg",
   "type": "module",
-  "version": "0.57.4",
+  "version": "0.0.1",
   "description": "Support valueless attributify in JSX/TSX.",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "zhiyuanzmj <zhiyuanzmj@gamil.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/unocss/unocss/tree/main/packages/transformer-attributify-jsx#readme",
+  "homepage": "https://github.com/zhiyuanzmj/transformer-attributify-jsx-sg/tree/main#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/unocss/unocss",
-    "directory": "packages/transformer-attributify-jsx"
+    "url": "https://github.com/zhiyuanzmj/transformer-attributify-jsx-sg"
   },
   "bugs": {
-    "url": "https://github.com/unocss/unocss/issues"
+    "url": "https://github.com/zhiyuanzmj/transformer-attributify-jsx-sg/issues"
   },
   "keywords": [
     "unocss",
-    "unocss-transformer"
+    "unocss-transformer",
+    "ast-grep"
   ],
   "sideEffects": false,
   "exports": {
@@ -47,8 +46,5 @@
     "unbuild": "^2.0.0",
     "unocss": "^0.57.4",
     "vitest": "^0.34.6"
-  },
-  "dependencies": {
-    "@sxzz/eslint-config": "^3.7.4"
   }
 }

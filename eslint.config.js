@@ -1,3 +1,3 @@
-import { sxzz } from "@sxzz/eslint-config";
+import antfu from '@antfu/eslint-config'
 
-export default sxzz();
+export default antfu()
