@@ -1,8 +1,10 @@
-# @unocss/transformer-attributify-jsx-sg
+# transformer-attributify-jsx-sg
 
 <!-- @unocss-ignore -->
 
-Support [valueless attributify](https://github.com/unocss/unocss/tree/main/packages/preset-attributify#valueless-attributify) in JSX/TSX.
+## Support [valueless attributify](https://github.com/unocss/unocss/tree/main/packages/preset-attributify#valueless-attributify) in JSX/TSX. 
+
+Using [ast-grep](https://github.com/ast-grep/ast-grep) to match attributes. Thanks for [HerringtonDarkholme](https://github.com/HerringtonDarkholme).
 
 ```jsx
 export function Component() {
@@ -46,13 +48,13 @@ export function Component() {
 ## Install
 
 ```bash
-npm i -D @unocss/transformer-attributify-jsx-sg
+npm i -D transformer-attributify-jsx-sg
 ```
 
 ```ts
 // uno.config.ts
 import { defineConfig, presetAttributify } from 'unocss'
-import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx-sg'
+import transformerAttributifyJsx from 'transformer-attributify-jsx-sg'
 
 export default defineConfig({
   // ...
