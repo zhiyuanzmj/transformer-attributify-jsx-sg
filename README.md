@@ -13,6 +13,8 @@ transformerAttributifyJsxSg: 3681ms
 transformerAttributifyJsxBabel: 14573ms
 ```
 
+## Usage
+
 ```jsx
 export function Component() {
   return (
