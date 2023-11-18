@@ -1,7 +1,7 @@
 {
-  "name": "transformer-attributify-jsx-sg",
+  "name": "@unocss/transformer-attributify-jsx-sg",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Support valueless attributify in JSX/TSX.",
   "author": "zhiyuanzmj <zhiyuanzmj@gamil.com>",
   "license": "MIT",
@@ -34,7 +34,10 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "dev": "unbuild --stub"
+    "bench": "node bench/ms.js",
+    "dev": "unbuild --stub",
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^1.0.1",
@@ -42,6 +45,7 @@
     "@babel/preset-typescript": "^7.23.3",
     "@unocss/core": "^0.57.4",
     "@unocss/transformer-attributify-jsx-babel": "^0.57.4",
+    "bumpp": "^9.2.0",
     "magic-string": "^0.30.5",
     "unbuild": "^2.0.0",
     "unocss": "^0.57.4",
