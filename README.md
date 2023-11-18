@@ -8,9 +8,9 @@ Using [ast-grep](https://github.com/ast-grep/ast-grep) to match attributes, Than
 ### Benchmark
 `pnpm run bench`
 ```
-transformerAttributifyJsx: 1224ms
-transformerAttributifyJsxSg: 3681ms
-transformerAttributifyJsxBabel: 14573ms
+transformerAttributifyJsx: 1169ms
+transformerAttributifyJsxSg: 2739ms
+transformerAttributifyJsxBabel: 12806ms
 ```
 
 ## Usage
