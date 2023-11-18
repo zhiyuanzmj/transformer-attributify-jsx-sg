@@ -1,4 +1,4 @@
-import { fixtures } from './fixtures/index'
+import { fixtures } from './fixtures/index.js'
 
 async function benchmark(name, fn) {
   const times = 1000

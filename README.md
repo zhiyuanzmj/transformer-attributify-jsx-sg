@@ -1,4 +1,4 @@
-# @unocss/transformer-attributify-jsx
+# @unocss/transformer-attributify-jsx-sg
 
 <!-- @unocss-ignore -->
 
@@ -46,13 +46,13 @@ export function Component() {
 ## Install
 
 ```bash
-npm i -D @unocss/transformer-attributify-jsx
+npm i -D @unocss/transformer-attributify-jsx-sg
 ```
 
 ```ts
 // uno.config.ts
 import { defineConfig, presetAttributify } from 'unocss'
-import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
+import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx-sg'
 
 export default defineConfig({
   // ...
@@ -113,4 +113,4 @@ Will be compiled to:
 
 ## License
 
-MIT License &copy; 2022-PRESENT [Anthony Fu](https://github.com/antfu)
+MIT License &copy; 2022-PRESENT [zhiyuanzmj](https://github.com/zhiyuanzmj)
