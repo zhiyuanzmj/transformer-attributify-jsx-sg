@@ -74,23 +74,10 @@ export default function transformerAttributifyJsxSg(
       const nodes = root.findAll({
         rule: {
           kind: 'jsx_attribute',
-          has: {
-            pattern: '$A',
-            any: [
-              { kind: 'property_identifier' },
-              { kind: 'jsx_namespace_name' },
-            ],
-          },
           not: {
             has: {
               any: [{ kind: 'jsx_expression' }, { kind: 'string' }],
             },
-          },
-          inside: {
-            any: [
-              { kind: 'jsx_opening_element' },
-              { kind: 'jsx_self_closing_element' },
-            ],
           },
         },
       })
