@@ -2,8 +2,7 @@
 
 <!-- @unocss-ignore -->
 
-## Support [valueless attributify](https://github.com/unocss/unocss/tree/main/packages/preset-attributify#valueless-attributify) in JSX/TSX. 
-
+Support [valueless attributify](https://github.com/unocss/unocss/tree/main/packages/preset-attributify#valueless-attributify) in JSX/TSX. 
 Using [ast-grep](https://github.com/ast-grep/ast-grep) to match attributes. Thanks for [HerringtonDarkholme](https://github.com/HerringtonDarkholme).
 
 ```jsx
