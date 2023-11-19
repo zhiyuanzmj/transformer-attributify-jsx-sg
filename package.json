@@ -49,6 +49,7 @@
     "@babel/preset-typescript": "^7.23.3",
     "@unocss/core": "^0.57.4",
     "@unocss/transformer-attributify-jsx-babel": "^0.57.4",
+    "benny": "^3.7.1",
     "bumpp": "^9.2.0",
     "magic-string": "^0.30.5",
     "typescript": "^5.2.2",

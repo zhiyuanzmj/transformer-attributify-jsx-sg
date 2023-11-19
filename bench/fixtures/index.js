@@ -29,12 +29,12 @@ let originalCode = `
       <router-link to={\`/path/\${1}\`}/>
     </div>
   </div>
-  <section 
-    className={cn({ 'c-red': variable > 0 }, 'mr-10')} 
-    mr-10 
+  <section
+    className={cn({ 'c-red': variable > 0 }, 'mr-10')}
+    mr-10
     className={cn({ 'c-red': variable > 0 }, 'mr-10')}
   ></section>
-  <div 
+  <div
     label={
       <b>1</b>
     }
@@ -44,10 +44,10 @@ let originalCode = `
   </div>
   <div components={<div absolute bottom-5></div>}></div>
   <h1 flex>h1</h1>
-  <div {...{ flex }} />  
+  <div {...{ flex }} />
   <div {...{ onClick: () => { grid(); flex } }} flex />
-  <div {...true ? flex : props.grid } {...grid || ( block ) && $flex } />  
-  <div {...[, flex, [flex], !flex, -flex, +flex, ~flex, "flex", \`flex\` ] } />  
+  <div {...true ? flex : props.grid } {...grid || ( block ) && $flex } />
+  <div {...[, flex, [flex], !flex, -flex, +flex, ~flex, "flex", \`flex\` ] } />
 </div>
   `.trim().repeat(10)
 originalCode = `<>${originalCode}`
@@ -58,31 +58,25 @@ const uno = createGenerator({
 })
 
 export const fixtures = [
-  {
-    async transformerAttributifyJsx() {
-      const code = new MagicString(originalCode)
-      await transformerAttributifyJsx().transform(code, 'app.tsx', {
-        uno,
-        tokens: new Set(),
-      })
-    },
+  async function benchRegexTransform() {
+    const code = new MagicString(originalCode)
+    await transformerAttributifyJsx().transform(code, 'app.tsx', {
+      uno,
+      tokens: new Set(),
+    })
   },
-  {
-    async transformerAttributifyJsxSg() {
-      const code = new MagicString(originalCode)
-      await transformerAttributifyJsxSg().transform(code, '/Users/zmj/Documents/transformer-attributify-jsx-sg/test/app.tsx', {
-        uno,
-        tokens: new Set(),
-      })
-    },
+  async function benchAstGrepTransform() {
+    const code = new MagicString(originalCode)
+    await transformerAttributifyJsxSg().transform(code, '/Users/zmj/Documents/transformer-attributify-jsx-sg/test/app.tsx', {
+      uno,
+      tokens: new Set(),
+    })
   },
-  {
-    async  transformerAttributifyJsxBabel() {
-      const code = new MagicString(originalCode)
-      await transformerAttributifyJsxBabel().transform(code, 'app.tsx', {
-        uno,
-        tokens: new Set(),
-      })
-    },
+  async function benchBabelTransform() {
+    const code = new MagicString(originalCode)
+    await transformerAttributifyJsxBabel().transform(code, 'app.tsx', {
+      uno,
+      tokens: new Set(),
+    })
   },
 ]
