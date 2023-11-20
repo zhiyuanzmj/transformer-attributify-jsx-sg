@@ -52,6 +52,7 @@
     "benny": "^3.7.1",
     "bumpp": "^9.2.0",
     "magic-string": "^0.30.5",
+    "transformer-attributify-jsx-swc": "^0.0.1",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
     "unocss": "^0.57.4",

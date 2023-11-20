@@ -5,6 +5,7 @@ import {
   transformerAttributifyJsx,
 } from 'unocss'
 import transformerAttributifyJsxBabel from '@unocss/transformer-attributify-jsx-babel'
+import transformerAttributifyJsxSwc from 'transformer-attributify-jsx-swc'
 import { createGenerator } from '@unocss/core'
 
 import transformerAttributifyJsxSg from '../../dist/index.mjs'
@@ -68,6 +69,13 @@ export const fixtures = [
   async function benchAstGrepTransform() {
     const code = new MagicString(originalCode)
     await transformerAttributifyJsxSg().transform(code, 'app.tsx', {
+      uno,
+      tokens: new Set(),
+    })
+  },
+  async function benchSwcTransform() {
+    const code = new MagicString(originalCode)
+    await transformerAttributifyJsxSwc().transform(code, 'app.tsx', {
       uno,
       tokens: new Set(),
     })
