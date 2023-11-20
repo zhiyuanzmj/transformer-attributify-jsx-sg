@@ -67,7 +67,7 @@ export const fixtures = [
   },
   async function benchAstGrepTransform() {
     const code = new MagicString(originalCode)
-    await transformerAttributifyJsxSg().transform(code, '/Users/zmj/Documents/transformer-attributify-jsx-sg/test/app.tsx', {
+    await transformerAttributifyJsxSg().transform(code, 'app.tsx', {
       uno,
       tokens: new Set(),
     })
