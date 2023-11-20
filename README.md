@@ -16,7 +16,7 @@ benchAstGrepTransform:
   13 ops/s, ±0.34%   | 18.75% slower
 
 benchSwcTransform:
-  6 ops/s, ±0.84%   | 62.5% slower
+  6 ops/s, ±0.84%    | 62.5% slower
 
 benchBabelTransform:
   2 ops/s, ±1.44%    | slowest, 87.5% slower
