@@ -69,7 +69,7 @@ export default function transformerAttributifyJsxSg(
     async transform(code, _, { uno }) {
       const tasks: Promise<void>[] = []
 
-      const ast = js.parse(code.original)
+      const ast = await js.parseAsync(code.original)
       const root = ast.root()
       const nodes = root.findAll({
         rule: {

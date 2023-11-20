@@ -8,17 +8,18 @@ Using [ast-grep](https://github.com/ast-grep/ast-grep) to match attributes, Than
 ### Benchmark
 `pnpm run bench`
 ```
+Running "unocss concurrent transform jsx" suite...
 benchRegexTransform:
-  878 ops/s, ±0.39%   | fastest
+  16 ops/s, ±9.95%   | fastest
 
 benchAstGrepTransform:
-  372 ops/s, ±0.34%   | 57.63% slower
+  13 ops/s, ±0.34%   | 18.75% slower
 
 benchSwcTransform:
-  235 ops/s, ±0.80%   | 73.23% slower
+  6 ops/s, ±0.84%   | 62.5% slower
 
 benchBabelTransform:
-  75 ops/s, ±3.07%    | slowest, 91.46% slower
+  2 ops/s, ±1.44%    | slowest, 87.5% slower
 ```
 
 ## Usage
