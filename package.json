@@ -1,7 +1,7 @@
 {
   "name": "transformer-attributify-jsx-sg",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Support valueless attributify in JSX/TSX.",
   "author": "zhiyuanzmj <zhiyuanzmj@gmail.com>",
   "license": "MIT",
