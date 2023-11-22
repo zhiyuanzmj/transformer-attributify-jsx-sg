@@ -14,7 +14,7 @@ function concurrent(n, f) {
 
 await b.suite(
   'unocss concurrent transform jsx',
-  ...fixtures.map(f => b.add(f.name, concurrent(5, f))),
+  ...fixtures.map(f => b.add(f.name, concurrent(8, f))),
   b.cycle(),
   b.complete(),
 )

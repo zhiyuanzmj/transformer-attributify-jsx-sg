@@ -50,7 +50,7 @@ let originalCode = `
   <div {...true ? flex : props.grid } {...grid || ( block ) && $flex } />
   <div {...[, flex, [flex], !flex, -flex, +flex, ~flex, "flex", \`flex\` ] } />
 </div>
-  `.trim().repeat(80)
+  `.trim().repeat(10)
 originalCode = `<>${originalCode}`
 originalCode += '</>'
 
