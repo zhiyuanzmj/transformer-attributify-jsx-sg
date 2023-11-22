@@ -35,7 +35,7 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "bench": "node bench/ms.js",
+    "bench": "UV_THREADPOOL_SIZE=8 node bench/ms.js",
     "test": "vitest",
     "release": "bumpp && pnpm publish",
     "prepublishOnly": "pnpm run build"
