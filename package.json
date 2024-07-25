@@ -41,22 +41,22 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "@ast-grep/napi": "^0.16.1",
-    "@unocss/core": "^0.58.3"
+    "@ast-grep/napi": "^0.25.3",
+    "@unocss/core": "^0.61.5"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.2",
-    "@babel/preset-typescript": "^7.23.3",
-    "@types/node": "^20.10.8",
+    "@antfu/eslint-config": "^2.23.2",
+    "@babel/preset-typescript": "^7.24.7",
+    "@types/node": "^20.14.12",
     "@unocss/core": "^0.57.4",
-    "@unocss/transformer-attributify-jsx-babel": "^0.58.3",
+    "@unocss/transformer-attributify-jsx-babel": "^0.61.5",
     "benny": "^3.7.1",
-    "bumpp": "^9.2.1",
-    "magic-string": "^0.30.5",
+    "bumpp": "^9.4.1",
+    "magic-string": "^0.30.10",
     "transformer-attributify-jsx-swc": "^0.0.1",
-    "typescript": "^5.3.3",
+    "typescript": "^5.5.4",
     "unbuild": "^2.0.0",
-    "unocss": "^0.58.3",
-    "vitest": "^1.1.3"
+    "unocss": "^0.61.5",
+    "vitest": "^2.0.4"
   }
 }
