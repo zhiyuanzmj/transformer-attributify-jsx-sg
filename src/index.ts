@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { toArray } from '@unocss/core'
 import type { SourceCodeTransformer } from '@unocss/core'
 import { js } from '@ast-grep/napi'
@@ -67,6 +68,8 @@ export default function transformerAttributifyJsxSg(
     enforce: 'pre',
     idFilter,
     async transform(code, _, { uno }) {
+      if (process.env.VSCODE_CWD)
+        return
       const tasks: Promise<void>[] = []
 
       const ast = await js.parseAsync(code.original)
@@ -84,7 +87,7 @@ export default function transformerAttributifyJsxSg(
 
       for (const node of nodes) {
         const range = node.range()
-        const matchedRule = node.text().replace(/:/i, '-')
+        const matchedRule = node.text().replace(/:/, '-')
         if (isBlocked(matchedRule))
           continue
 
